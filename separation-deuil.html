@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-witdh, initial-scale=1.0">
+    <title>Chemin de Résilience | Apprivoiser l'absence</title>
+    <link rel="stylesheet" href="separation-deuil.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Résilience</div>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#comprendre">Comprendre</a></li>
+                <li><a href="#etapes">Les Étapes</a></li>
+                <li><a href="#ressources">Ressources</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Apprivoiser L'absence</h1>
+        <p> Un espace pour comprendre, ressentir et avancer après une séparation.</p>
+    </section>
+
+    <main>
+        <section id="comprendre" class="content">
+            <h2>Qu'est-ce que le deuil de la séparation ?</h2>
+            <p>La fin d'une relation est une petite mort. Il est normal de traverser une période de grande souffrance.</p>
+        </section>
+
+        <section id="etapes" class="content">
+            <h2>Les étapes du cheminement</h2>
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Le Choc</h3>
+                    <p>Au début, l'esprit refuse l'évidence. On a l'impression d'être dans un brouillard, d'agir comme un automate. C'est un mécanisme de protection du cerveau face à une douleur trop intense.</p>
+                </div>
+                <div class="card">
+                    <h3>La Colère</h3>
+                    <p>La colère peut se diriger contre l'autre, contre soi-même, ou contre l'injustice de la situation. C'est une énergie nécessaire qui indique que vous commencez à réaliser la perte.</p>
+                </div>
+                <div class="card">
+                    <h3>La Tristesse</h3>
+                    <p>C'est souvent l'étape la plus longue. On revit les souvenirs, on imagine des scénarios. La tristesse n'est pas un signe de faiblesse, mais la preuve que ce que vous avez vécu était important.</p>
+                </div>
+
+                <div class="card">
+                    <h3>La Reconstruction</h3>
+                    <p>L'acceptation ne signifie pas l'oubli. On commence à faire de nouveaux projets, seul(e), et à redécouvrir qui l'on est aujourd'hui, avec une force nouvelle.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ressources" class="content">
+            <h2>Vous n'êtes pas seul(e)</h2>
+            <div class="emergency-grid">
+                <div class="emergency-box">
+                    <h3>Écoute et soutien</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><strong>SOS Amitié :</strong> 09.72.39.40.50 (24h/24)</li>
+                        <li><strong>Suicide Écoute :</strong> 01.45.39.40.00</li>
+                        <li><strong>3114 :</strong> Le numéro national de prévention du suicide</li>
+                    </ul>   
+                </div>
+                <div class="emergency-box">
+                    <h3>Ressouces pour avancer</h3>
+                    <ul stule="list-style: none; padding: 0;">
+                        <li>📖 <em>"Sur le chagrin et le deuil"</em> - Elisabeth Kübler-Ross</li>
+                        <li>🎧 Podcast : <em>"Les pieds sur terre"</em> (histoires de résilience)</li>
+                        <li>🧘 Application : <em>"Petit BamBou"</em> (méditations sur le deuil)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="Contact" class="content">
+            <h2>Besoin de parler ?</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label>Votre Prénom</label>
+                    <input type="text" placeholder="Comment vous appelez-vous?" required>  
+                </div>
+                <div class="form-group">
+                    <label>Votre Email</label>
+                    <input type="email" placeholder="Pour vous répondre" required>
+                </div>
+                <div class="form-group">
+                    <label>Votre message</label>
+                    <textarea rows="5" placeholder="Comment vous sentez-vous aujourd'hui?"></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer avec douceur</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Chemin de Résilience - Chaque pas compte.</p>
+    </footer>
+
+    <script>
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav-links');
+
+        burger.addEventListener('click',() => {
+            nav.classList.toggle('nav-active'); //Affiche le menu
+            burger.classList.toggle('toggle'); // Anime le burger en X
+        });
+
+        //Fermer le menu quand on clique sur un lien (mobile)
+        document.querySelectorAll('nav-links a').forEach(link =>{
+            link.addEventListener('click',() =>{
+                nav.classList.remove('nav-active');
+                burger.classList.remove('toggle');
+            })
+        })
+    </script>
+
+</body>
+</html>
